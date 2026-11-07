@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwiftHaul Logistics | Our Story &amp; Contact</title>
+
+  <!-- Author: Mikhelyn Bowie | Date: November 3, 2026 -->
+  <!-- Replace Member 1 and Member 2 with your group members' names. -->
+
+  <style>
+    :root {
+      --brown: #351c15;
+      --gold: #ffb500;
+      --cream: #faf6ef;
+      --ink: #222;
+      --gray: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      background: var(--brown);
+      color: #fff;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .shield {
+      width: 34px;
+      height: 40px;
+      background: var(--gold);
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+      display: grid;
+      place-items: center;
+      color: var(--brown);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a[aria-current] {
+      color: var(--gold);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #b77700;
+      outline-offset: 5px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--brown), #5a3326);
+      color: #fff;
+      padding: 64px 24px;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero-in {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .8rem;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .tag {
+      font-size: 1.2rem;
+      max-width: 540px;
+      color: #f0e5dd;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    section {
+      padding: 64px 24px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .cream {
+      background: var(--cream);
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 44px;
+    }
+
+    .kicker {
+      display: block;
+      font-weight: 700;
+      color: #815500;
+      letter-spacing: 2px;
+      font-size: .8rem;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: var(--gray);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      border: 1px solid #e7dfd5;
+      border-top: 5px solid var(--gold);
+      border-radius: 10px;
+      padding: 28px;
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      background: var(--cream);
+      color: var(--brown);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .role {
+      color: #815500;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child {
+      color: var(--gray);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      margin-top: 30px;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    address p {
+      margin-bottom: 20px;
+    }
+
+    address strong {
+      display: block;
+      color: var(--brown);
+    }
+
+    .note {
+      font-size: .85rem;
+      color: var(--gray);
+      margin-top: 18px;
+    }
+
+    form {
+      background: #fff;
+      border: 1px solid #e7dfd5;
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      font: inherit;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #815500;
+      outline-offset: 2px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      border: 0;
+      background: var(--gold);
+      color: var(--brown);
+      padding: 13px 26px;
+      border-radius: 30px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffc533;
+    }
+
+    #form-status {
+      color: var(--brown);
+      font-weight: 600;
+      margin-top: 14px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 48px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 22px;
+    }
+
+    caption {
+      text-align: left;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 12px 0;
+      border-bottom: 1px solid #e7dfd5;
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    details {
+      border-bottom: 1px solid #e7dfd5;
+      padding: 16px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--brown);
+      font-weight: 700;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: var(--gray);
+    }
+
+    footer {
+      background: #1d0f0b;
+      color: #ccc;
+      text-align: center;
+      padding: 24px;
+      font-size: .85rem;
+    }
+
+    /* Adjust the layout for phones and smaller screens. */
+    @media (max-width: 800px) {
+      .hero-in,
+      .story,
+      .contact-grid,
+      .info-grid,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      nav {
+        gap: 18px;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero {
+        padding: 48px 24px;
+      }
+
+      .hero img {
+        max-width: 480px;
+      }
+
+      section {
+        padding: 44px 24px;
+      }
+
+      .story,
+      .info-grid,
+      .contact-grid {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header and navigation -->
+  <header>
+    <div class="nav">
+      <a class="logo" href="index.html">
+        <span class="shield" aria-hidden="true">S</span>
+        SWIFTHAUL
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="page3.html" aria-current="page"> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Introduction and business image -->
+    <div class="hero">
+      <div class="wrap hero-in">
+        <div>
+          <p class="eyebrow">THE PEOPLE BEHIND THE PROMISE</p>
+
+          <h1>
+            Big journeys.<br>
+            <span>Personal beginnings.</span>
+          </h1>
+
+          <p class="tag">
+            Every package has a story. Here is ours—and how to start a
+            conversation with the people moving your world forward.
+          </p>
+        </div>
+
+        <!-- Embedded image works without a separate image file. -->
+        <img
+          width="520"
+          height="340"
+          alt="Illustration of a SwiftHaul delivery truck carrying packages past a city skyline"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 340'%3E%3Crect width='520' height='340' rx='16' fill='%23faf6ef'/%3E%3Ccircle cx='418' cy='68' r='30' fill='%23ffb500'/%3E%3Cg fill='%23e5d9c8'%3E%3Cpath d='M25 245V138h66v107h18V98h76v147h23V125h63v120h24V70h66v175h20V145h97v100Z'/%3E%3C/g%3E%3Cpath d='M20 280h480' stroke='%23351c15' stroke-width='5'/%3E%3Crect x='62' y='144' width='245' height='109' rx='8' fill='%23351c15'/%3E%3Cpath d='M307 177h69l64 52v24H307Z' fill='%23ffb500'/%3E%3Cpath d='M328 190h41l37 31h-78Z' fill='%23351c15'/%3E%3Cg fill='%23351c15' stroke='%23faf6ef' stroke-width='7'%3E%3Ccircle cx='126' cy='260' r='24'/%3E%3Ccircle cx='371' cy='260' r='24'/%3E%3C/g%3E%3Ctext x='90' y='194' fill='%23ffb500' font-family='Arial,sans-serif' font-size='24' font-weight='bold'%3ESWIFTHAUL%3C/text%3E%3Ctext x='92' y='220' fill='white' font-family='Arial,sans-serif' font-size='13'%3EDELIVERING YOUR PROMISE%3C/text%3E%3Crect x='413' y='244' width='34' height='34' fill='%23b47d37'/%3E%3Cpath d='M430 244v16' stroke='%23faf6ef' stroke-width='5'/%3E%3C/svg%3E"
+        >
+      </div>
+    </div>
+
+    <!-- Origin story -->
+    <section class="cream" aria-labelledby="story-heading">
+      <div class="wrap story">
+        <div>
+          <span class="kicker">ESTABLISHED 1998</span>
+          <h2 id="story-heading">
+            Unlimited Problems.<br>
+            Infinite Solutions.
+          </h2>
+        </div>
+
+        <div>
+          <p>
+            UPS targets businesses of all shapes and sizes tailoring their services for everyone.
+          </p>
+
+          <p>
+          </p>
+
+          <p>
+           
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team members: edit names, initials, titles, and biographies here. -->
+    <section aria-labelledby="team-heading">
+      <div class="wrap">
+        <span class="kicker">MEET THE FOUNDERS</span>
+        <h2 id="team-heading">Three minds. One destination.</h2>
+
+        <p class="intro">
+          Our student group takes on these fictional founding roles. From
+          planning the route to building the technology, everyone helps
+          deliver the promise.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="avatar" aria-hidden="true">ZJ</div>
+            <h3>Zachary Johnson</h3>
+            <p class="role">Co-founder &amp; Networking Engineer</p>
+            <p>
+              Centered on designing, maintaining, securing, implementing and troubleshooting an organizations network.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="avatar" aria-hidden="true">NR</div>
+            <h3>Noah Roberts</h3>
+            <p class="role">Co-founder &amp; Operations Manager</p>
+            <p>
+              Overseeing shipping activities, coordinating with carriers, ports, and customers to keep freight moving efficiently
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="avatar" aria-hidden="true">MB</div>
+            <h3>Mikhelyn Bowie</h3>
+            <p class="role">Co-founder &amp; IT Support Specialist </p>
+            <p>
+              Hands on Support across logistic operations, Account and Access Management, Security awareness
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact information and practice form -->
+    <section class="cream" id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <span class="kicker">LET'S CONNECT</span>
+        <h2 id="contact-heading">Your next delivery starts here.</h2>
+
+        <div class="contact-grid">
+          <div>
+            <address>
+              <p>
+                <strong>Email</strong>
+                <a href="mailto:hello@swifthaul.example">
+                  hello@swifthaul.example
+                </a>
+              </p>
+
+              <p>
+                <strong>Phone</strong>
+                <a href="tel:+18645550148">(864) 555-0148</a>
+              </p>
+
+              <p>
+                <strong>Visit our fictional campus storefront</strong>
+                Innovation Hall, Room 120<br>
+                100 Campus Loop, Greenville, SC 29601
+              </p>
+
+              <p>
+                <strong>Find us on social media</strong>
+                Instagram: @SwiftHaulLogistics<br>
+                TikTok: @SwiftHaulMoves<br>
+                Facebook: SwiftHaul Logistics
+              </p>
+            </address>
+
+            <p class="note">
+              All contact details and social handles are fictional examples
+              for this class project.
+            </p>
+          </div>
+
+          <form id="contact-form" aria-describedby="demo-note" inert>
+            <h3>Send a demo message</h3>
+
+            <p class="note" id="demo-note">
+              Practice form only. Nothing is sent or stored.
+              Use made-up details.
+            </p>
+            <br>
+
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="off"
+              placeholder="Your demo name"
+              required
+              maxlength="100"
+            >
+
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="off"
+              placeholder="you@example.com"
+              required
+              maxlength="254"
+            >
+
+            <label for="message">How can we help?</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us about your imaginary shipment…"
+              required
+              maxlength="2000"
+            ></textarea>
+
+            <button type="submit">Try demo submission</button>
+            <p id="form-status" role="status"></p>
+
+            <noscript>
+              <p class="note">
+                JavaScript is off. You can read our contact details;
+                the demo submission requires JavaScript.
+              </p>
+            </noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store hours and frequently asked questions -->
+    <section aria-label="Hours and frequently asked questions">
+      <div class="wrap info-grid">
+        <div>
+          <span class="kicker">PLAN YOUR VISIT</span>
+          <h2>Storefront hours</h2>
+
+          <table>
+            <caption>Pretend hours · Eastern Time</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Monday–Friday</th>
+                <td>8 a.m.–6 p.m.</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>9 a.m.–2 p.m.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="note">
+            Our fictional online support team is available 24/7,
+            even while the campus counter is closed.
+          </p>
+        </div>
+
+        <div>
+          <span class="kicker">GOOD QUESTIONS. SWIFT ANSWERS.</span>
+          <h2>Frequently asked questions</h2>
+
+          <details>
+            <summary>Can you deliver my homework before class?</summary>
+            <p>
+              We can move a package, but we cannot negotiate your deadline!
+              Our pretend campus delivery service handles supplies and parcels,
+              not homework miracles.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you ship internationally?</summary>
+            <p>
+              In our fictional business, yes! Our global freight team serves
+              more than 120 countries and helps customers plan their customs
+              paperwork.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I ship a birthday cake?</summary>
+            <p>
+              In our pretend store, we would recommend protective,
+              temperature-appropriate packaging and a suitable delivery service.
+              Birthday candles ride unlit, of course.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where is my package?</summary>
+            <p>
+              This class website has no live tracking. In our fictional service,
+              you would use the tracking number from your shipping receipt or
+              contact our support team.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will this form book a real delivery?</summary>
+            <p>
+              No. SwiftHaul is a fictional class project. The form only displays
+              a practice confirmation and does not send a message or create
+              a shipment.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 SwiftHaul Logistics — a fictional company for demonstration purposes.
+    </p>
+  </footer>
+
+  <script>
+    // Demonstration only: prevent navigation and never transmit form data.
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      document.getElementById('form-status').textContent =
+        'Demo complete! No message was sent and no delivery was booked.';
+
+      form.reset();
+    });
+
+    // Enable the practice form after its submit handler is ready.
+    form.removeAttribute('inert');
+  </script>
+
+</body>
+</html>
